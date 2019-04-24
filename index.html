@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
@@ -25,6 +26,7 @@ body {font-size:16px;}
     <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Novidades</a>
     <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Download</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contato</a>
+    <a href="#login" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Login</a>
   </div>
 </nav>
 
@@ -225,6 +227,20 @@ Os consoles recebem as modificações da atualização 1.2 com o patch 1.3, que 
     </form>
   </div>
 
+<div class="w3-container" id="login" style="margin-top:75px">
+<h1 class="w3-xxxlarge w3-text-red"><b>Entre em contato:</b></h1>
+<hr style="width:50px;border:5px solid red" class="w3-round">
+<form id="meuFormulario" action="pagina2.html">
+</div>
+Usuario:<br>
+<input type="text" name="usuario" value="" id="usuario">
+<br>
+Senha:<br>
+<input type="password" name="senha" value="" id="senha">
+<br><br>
+<button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Entrar</button>
+</form>
+
 <!-- End page content -->
 </div>
 
@@ -232,6 +248,21 @@ Os consoles recebem as modificações da atualização 1.2 com o patch 1.3, que 
 <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.instagram.com/gustav.ma/" title="W3.CSS" target="_blank" class="w3-hover-opacity">Gustavo Moura</a></p></div>
 
 <script>
+$(document).ready(function(){
+  $('#meuFormulario').on('submit', function(e){
+          e.preventDefault();
+          var len1 = $('#usuario').val();
+          var len2 = $('#senha').val();
+          if (len1 == 'gustavo' && len2 == '123') {
+              localStorage.setItem("usuario", $('#usuario').val());
+              localStorage.setItem("senha", $('#senha').val());
+              this.submit();
+          }else{
+            alert("Acesso NEGADO!!!")
+          }
+      });
+});
+
 // Script to open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";

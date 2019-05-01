@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>RainbowSixSiege</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Menu<br>Interativo</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Início</a>
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Sobre</a>
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Novidades</a>
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Download</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contato</a>
+    <a href="#login" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Login</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Menu Interativo</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Rainbow Six Siege</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Início:</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="https://images5.alphacoders.com/700/thumb-350-700496.jpg" style="width:100%" onclick="onClick(this)" alt="Enfrente adversarios do mundo todo">
+    </div>
+
+    <div class="w3-half">
+      <img src="https://images8.alphacoders.com/700/thumb-350-700498.jpg" style="width:100%" onclick="onClick(this)" alt="Vire um jogador profissional">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Sobre:</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Conheça o jogo de tiro mais tático do PC, PS4 e Xbox One. Escolha seus agentes para partidas intensas de equipes 5x5 em um dos nossos numerosos mapas icônicos!</p>
+    <p>Para cada fase do jogo, escolha um dos 30+ agentes atacantes ou defensores, cada um com seus gadgets e estilo de jogo únicos. Construa a melhor equipe possível ao selecionar agentes que completam uns aos outros.</p>
+    <p>Participe de intensos combates em vários mapas ao redor do mundo. Todos são diferentes, portanto você deverá adaptar suas estratégias e táticas e escolher seus agentes adequadamente. Mais vídeos dos mapas em breve.</p>
+    <p>Quer se aprofundar em dicas e estratégias sobre os Mapas, Operadores e táticas? R6Academy é uma plataforma de comunidade para compartilhar e aprender juntos. Veja vídeos feitos por jogadores, ou compartilhe os seu próprios, e aprenda mais sobre as melhores estratégias de gameplay.</p>
+  </div>
+
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Novidades:</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>CONHEÇA OS NOVOS OPERADORES</p>
+    <p>Gridlock e Mozzie se conheceram em um evento de luta de robôs na sua adolescência, e alguns anos depois Mozzie convenceu Grid a se unir nas Forças de Defesa. Eles foram acionados juntos, já que foram chamados para ajudar na luta contra um dos maiores incêndios florestais do século.</p>
+    <p><b>Últimas Notícias:</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://ubistatic19-a.akamaihd.net/resource/pt-br/game/news/rainbow6/siege-v3/y4s1.2_pn_346316.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>NOTAS DA ATUALIZAÇÃO Y4S1.2</h3>
+          <p class="w3-opacity">02/04/2019 12:00</p>
+          <p>A atualização Y4S1.2 será disponibilizada para PC no dia 4 de abril. O patch 1.2 tem como objetivo tratar de falhas e problemas duradouros.
+
+Os consoles recebem as modificações da atualização 1.2 com o patch 1.3, que chega nas próximas semanas. Sua data exata de lançamento ainda não foi definida.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://ubistatic19-a.akamaihd.net/resource/pt-br/game/news/rainbow6/siege-v3/r6_esport_invitational2019_keyart01_342901_342901.jpg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>APRESENTAMOS AS CONDIÇÕES DE JOGO ROAD TO S.I.</h3>
+          <p class="w3-opacity">25/01/2019 12:00</p>
+          <p>A partir do dia 25 de janeiro até 18 de fevereiro, jogue como os profissionais nas condições de jogo Road to S.I.. Essas condições vão ficar disponíveis no menu principal por meio da playlist Descoberta e inclui características como os mapas dos eSports e a função Escolher e Banir. Todos os detalhes dessas condições de jogo podem ser encontrados ao fim deste artigo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://ubistatic19-a.akamaihd.net/resource/pt-br/game/news/rainbow6/siege-v3/r6-bundle_blitz_sledge_bday-hybrid_ncsa-thumb-960x540_346330.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>NOVOS DESAFIOS SEMANAIS NO JOGO CHEGANDO AO RAINBOW SIX SIEGE - 2 DE ABRIL DE 2019</h3>
+          <p class="w3-opacity">02/04/2019 12:00</p>
+          <p>Deseje um feliz aniversário para o Sledge com o Desafio Ubisoft Club. Destrua 10 gadgets de defensores durante ataques para receber a estampa Presente do Sledge para M590A1.</p>
+          <p>Deseje um feliz aniversário para o Blitz com o Desafio Ubisoft Club. Destrua 10 gadgets de defensores durante ataques para receber a estampa Presente do Blitz para o Escudo Tático G52.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Adiquira o jogo:</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Escolha diversos planos de compra!</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Xbox One</li>
+        <li class="w3-padding-16">A rede multijogador online no Xbox requer o Xbox Live Gold
+(assinatura vendida separademente).</li>
+        <li class="w3-padding-16">Edição Deluxe</li>
+        <li class="w3-padding-16">Gold Edition</li>
+        <li class="w3-padding-16">Ultimate Edition</li>
+          <h2>R$ 149,00 - R$ 199,00 - R$ 299,00</h2>
+          <span class="w3-opacity">edições e seus valores respectivos</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="https://www.xbox.com/pt-BR/games/rainbow-six-siege#purchase">Compre.</a></button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-red w3-xlarge w3-padding-32">Playstation 4</li>
+        <li class="w3-padding-16">É preciso ter uma conta para usar os recursos online, que estão sujeitos aos termos de serviço e à política de privacidade aplicável. A taxa única de licença dá o direito de jogar no sistema PS4™ principal designado e outros sistemas PS4™ quando está usando essa conta.</li>
+        <li class="w3-padding-16">Edição Deluxe</li>
+        <li class="w3-padding-16">Gold Edition</li>
+        <li class="w3-padding-16">Ultimate Edition</li>
+        <li class="w3-padding-16">
+          <h2>R$ 194,99 - R$ 199,99 - R$ 299,99</h2>
+          <span class="w3-opacity">edições e seus valores respectivos</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-red w3-padding-large w3-hover-black"><a href="https://store.playstation.com/pt-br/product/UP0001-CUSA01800_00-RB6SIEGESPDELU04">Compre.</a></button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Steam</li>
+        <li class="w3-padding-16">Requer conta de terceiros: Ubisoft Account (permite vinculação à conta Steam)</li>
+        <li class="w3-padding-16">Sem Edição Especial</li>
+        <li class="w3-padding-16">Edição Deluxe</li>
+        <li class="w3-padding-16">Gold Edition</li>
+        <li class="w3-padding-16">Ultimate Edition</li>
+        <li class="w3-padding-16">
+          <h2>R$ 59,99 - R$ 89,99 - R$ 169,99 - R$ 279,99</h2>
+          <span class="w3-opacity">edições e seus valores respectivos</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/">Compre.</a></button>
+        </li>
+      </ul>
+    </div>
+  <div class="w3-half">
+    <ul class="w3-ul w3-light-grey w3-center">
+      <li class="w3-red w3-xlarge w3-padding-32">Lojas Americanas</li>
+      <li class="w3-padding-16">Jogos Fisicos</li>
+      <li class="w3-padding-16">Xbox One</li>
+      <li class="w3-padding-16">Playstation 4</li>
+      <li class="w3-padding-16">Diversos produtos relacionados</li>
+      <li class="w3-padding-16">
+        <h2>Tabela de preços - DISPONIBILIDADE APENAS NO SITE -</h2>
+        <span class="w3-opacity">produtos e seus respectivos valor somente no site oficial Americanas.com.br</span>
+      </li>
+      <li class="w3-light-grey w3-padding-24">
+        <button class="w3-button w3-red w3-padding-large w3-hover-black"><a href="https://www.americanas.com.br/busca/rainbow-six-siege"> Acesse.</a></button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Entre em contato:</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Você quer deixar sua opinião sobre nosso WebSite? Preencha os campos abaixo e entre em contato conosco.</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Nome:</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email:</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Menssagem:</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Enviar Mensagem</button>
+    </form>
+  </div>
+
+  <div class="w3-container" id="login" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Login:</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Faça o login para ir para area reservada.</p>
+
+    <!-- Button to Open the Modal -->
+    <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" data-toggle="modal" data-target="#myModal">Entrar</button>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="w3-container" id="login" style="margin-top:75px">
+  <h1><b>Entre com seu login e senha:</b></h1>
+  <form id="meuFormulario" action="pagina2.html">
+  </div>
+  Usuario:<br>
+  <input type="text" name="usuario" value="" id="usuario">
+  <br>
+  Senha:<br>
+  <input type="password" name="senha" value="" id="senha">
+  <br><br>
+  <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Entrar</button>
+  </form>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.instagram.com/gustav.ma/" title="W3.CSS" target="_blank" class="w3-hover-opacity">Gustavo Moura</a></p></div>
+
+<script>
+$(document).ready(function(){
+  $('#meuFormulario').on('submit', function(e){
+          e.preventDefault();
+          var len1 = $('#usuario').val();
+          var len2 = $('#senha').val();
+          if (len1 == 'gustavo' && len2 == '123') {
+              localStorage.setItem("usuario", $('#usuario').val());
+              localStorage.setItem("senha", $('#senha').val());
+              this.submit();
+          }else{
+            alert("Acesso NEGADO!!!")
+          }
+      });
+});
+
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
